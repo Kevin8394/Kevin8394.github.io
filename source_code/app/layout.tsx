@@ -6,7 +6,7 @@ import { assetPath } from "@/lib/site-path";
 
 export const metadata: Metadata = {
   title: { default: "Kevin Lin · Computer Engineering", template: "%s · Kevin Lin" },
-  description: "Kevin Lin is a Northwestern Computer Engineering BS/MS student working across embedded systems, digital design, physiological sensing, and data analysis.",
+  description: "I am a Northwestern Computer Engineering BS/MS student working across embedded systems, digital design, physiological sensing, and data analysis.",
   icons: { icon: assetPath("/favicon.svg"), shortcut: assetPath("/favicon.svg") },
 };
 
