@@ -1,0 +1,2 @@
+:HL["/_next/static/chunks/10eo.3k0j0m-..css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"projects","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"ce205-gravity-platformer","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"C2bFHdLR7d0BPjV-V2hv-"}
