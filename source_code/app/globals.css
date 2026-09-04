@@ -98,6 +98,8 @@ a { color: inherit; text-decoration: none; } img { display: block; max-width: 10
 .feature-media-split { width: 100%; height: 100%; display: grid; grid-template-rows: 42% 58%; gap: 1px; background: var(--border); }
 .feature-media-split img { object-fit: contain; background: #08080a; }
 .feature-card:nth-child(2) .feature-media img,.feature-card:nth-child(4) .feature-media img { object-position: top; }
+/* Slot-based object-position above must not override contained figures; keep them centred whichever slot they land in. */
+.feature-card .feature-media.feature-media-contain img { object-position: center; }
 .feature-media.feature-media-ce205 { display: grid; place-items: center; }
 .feature-card .feature-media.feature-media-ce205 > img { width: 100%; height: 100%; margin: auto; object-fit: contain; object-position: 50% 50%; }
 .feature-card:hover .feature-media img { transform: scale(1.025); filter: saturate(1); }

@@ -49,7 +49,7 @@ export default function Home() {
         <div className="feature-grid">
           {featuredProjects.map((project, index) => (
             <Link href={`/projects/${project.slug}`} className="feature-card" key={project.slug}>
-              <div className={`feature-media ${project.slug === "ce205-gravity-platformer" || project.slug === "neoflux" ? "feature-media-contain" : ""} ${project.slug === "ce205-gravity-platformer" ? "feature-media-ce205" : ""}`}>
+              <div className={`feature-media ${project.slug === "ce205-gravity-platformer" || project.slug === "neoflux" || project.slug === "fpga-reaction-timer" ? "feature-media-contain" : ""} ${project.slug === "ce205-gravity-platformer" ? "feature-media-ce205" : ""}`}>
                 {project.featuredImages ? (
                   <div className="feature-media-split" aria-hidden="true">
                     {project.featuredImages.map((image) => <img src={assetPath(image)} alt="" key={image} />)}
@@ -71,7 +71,7 @@ export default function Home() {
 
       <section className="project-index shell" aria-labelledby="project-index-heading">
         <div className="section-heading compact">
-          <div><p className="eyebrow"><span>Full index</span></p><h2 id="project-index-heading">Eleven projects, one evolving practice.</h2></div>
+          <div><p className="eyebrow"><span>Full index</span></p><h2 id="project-index-heading">Twelve projects, one evolving practice.</h2></div>
         </div>
         <div className="index-list">
           {projects.map((project, index) => (

@@ -231,6 +231,30 @@ const projectCatalog: Project[] = [
     featuredImages: ["/projects/ce303-xcelium-lab3.webp", "/projects/ce303-innovus-lab3.webp"],
   },
   {
+    slug: "fpga-reaction-timer",
+    title: "FPGA Reaction Timer",
+    navLabel: "Reaction Timer",
+    category: "Hardware",
+    organization: "Northwestern University",
+    year: "2026",
+    summary: "A four-trial rolling-average reaction timer taken from Verilog to a timing-closed, power-analyzed implementation on a Zynq-7000S FPGA.",
+    overview: "The timer randomizes a start cue, measures the interval until the player presses the react button, and reports a rolling average of the last four trials on a multiplexed seven-segment display. The project is as much about the implementation flow as the logic: every number here is read off the routed Vivado database rather than a synthesis estimate.",
+    role: "Designed the datapath and control in Verilog—two button debouncers, a pseudo-random pre-delay, a free-running elapsed-time counter, a four-trial accumulator, and a seven-segment scan driver—then constrained, implemented, and signed the design off in Vivado 2026.1.",
+    contribution: "Fit the design into 309 LUTs and 224 flip-flops on an xc7z007s-clg400-1, roughly 2% of the part's 14,400 LUTs and under 1% of its 28,800 registers, alongside 58 CARRY4 cells and 16 of 100 I/O; a single BUFG distributes the 100 MHz clock and one asynchronous clear reaches all 224 registers, with the three button and reset inputs cut by false-path constraints.",
+    result: "Closed post-route timing with zero failing endpoints against a 10 ns constraint: 4.401 ns worst setup slack across 305 endpoints, 0.199 ns worst hold slack, and 4.500 ns pulse-width slack, leaving 44% of the clock period as margin on a route-dominated critical path. Total on-chip power measured 0.098 W—0.005 W dynamic against 0.093 W device static—for a 26.1 °C junction temperature and 83.9 °C maximum ambient.",
+    tools: ["Verilog", "Vivado", "Zynq-7000S", "Static timing analysis", "Power analysis", "Button debouncing", "Seven-segment multiplexing"],
+    metrics: [
+      { value: "309 / 224", label: "LUTs / flip-flops" },
+      { value: "4.401 ns", label: "post-route setup slack" },
+      { value: "0.098 W", label: "total on-chip power" },
+    ],
+    media: [
+      { kind: "image", src: "/projects/fpga-reaction-timer-implementation.png", alt: "Vivado routed device view showing the reaction timer placed in one clock region of the Zynq-7000S", caption: "Routed implementation in Vivado: the whole design lands inside a single clock region (X1Y1), spanning slices X32–X43 by Y50–Y67 with the clock entering through BUFGCTRL_X0Y16.", aspect: "square" },
+      { kind: "video", src: "https://www.youtube-nocookie.com/embed/qWtkeBXqOEE", alt: "FPGA reaction timer demonstration on hardware", caption: "The implemented timer running on the board, from the start cue through the reaction-time readout on the seven-segment display.", aspect: "wide" },
+    ],
+    featuredImage: "/projects/fpga-reaction-timer-implementation.png",
+  },
+  {
     slug: "ce205-gravity-platformer",
     title: "CE 205: Gravity Platformer",
     navLabel: "CE 205",
@@ -273,6 +297,7 @@ const projectCatalog: Project[] = [
 
 const projectOrder = [
   "ce303-advanced-digital-design",
+  "fpga-reaction-timer",
   "ce205-gravity-platformer",
   "neoflux",
   "microphone-swallow-detection",
