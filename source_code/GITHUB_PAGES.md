@@ -4,6 +4,11 @@ This repository is `Kevin8394/Kevin8394.github.io`, a **root user site**, so the
 site is served from `https://kevin8394.github.io/` and the export uses
 root-absolute asset paths (`/_next/...`). There is no base path to configure.
 
+Use the following command to host on localhost:3000 for pre-deployment testing
+
+npx serve source_code/out -l 3000
+
+
 The published site is the static export committed to the **repository root**;
 `source_code/` holds the Next.js app it is generated from, and `tools/` holds the
 post-build step. Pages is configured as *Deploy from a branch* → branch root.

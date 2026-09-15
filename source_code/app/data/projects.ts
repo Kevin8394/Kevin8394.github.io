@@ -141,8 +141,6 @@ const projectCatalog: Project[] = [
     ],
     media: [
       { kind: "image", src: "/projects/neoflux-full-design.png", alt: "Full front and back view of the completed Neoflux PCB design", caption: "Full design view showing the completed top- and bottom-side routing across the main board and remote sensing section.", aspect: "wide" },
-      { kind: "image", src: "/projects/neoflux-layers-1-4.png", alt: "Neoflux PCB layer views for layers one through four", caption: "Layer-by-layer view of the four-layer stackup: component routing, ground plane, power plane, and bottom routing.", aspect: "square" },
-      { kind: "pdf", src: "/projects/neoflux-v13-schematic.pdf", embed: true, actionLabel: "Open schematic PDF", alt: "Neoflux version 13 electrical schematic", caption: "Embedded external reference for the complete Neoflux v13 electrical schematic.", aspect: "wide" },
     ],
     featured: true,
     featuredImage: "/projects/neoflux-full-design.png",
