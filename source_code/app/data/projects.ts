@@ -140,10 +140,10 @@ const projectCatalog: Project[] = [
       { value: "4 layers", label: "PCB stackup" },
     ],
     media: [
-      { kind: "image", src: "/projects/neoflux-full-design.png", alt: "Full front and back view of the completed Neoflux PCB design", caption: "Full design view showing the completed top- and bottom-side routing across the main board and remote sensing section.", aspect: "wide" },
+      { kind: "image", src: "/projects/neoflux-routing-detail.png", alt: "Close-up of Neoflux PCB routing around a fine-pitch package", caption: "Detail of the routing and via strategy around a fine-pitch package on the redesigned board.", aspect: "square" },
     ],
     featured: true,
-    featuredImage: "/projects/neoflux-full-design.png",
+    featuredImage: "/projects/neoflux-routing-detail.png",
   },
   {
     slug: "urov-electrical",
